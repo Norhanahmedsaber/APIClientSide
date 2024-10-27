@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import config from '../config.json'
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ const Signup = () => {
 
     const [error, setError] = useState('')
     const nav = useNavigate()
-    const [loginDisabled, setLoginDisabled] = useState(false);
+    const [loginDisabled,_] = useState(false);
 
     const onSubmitLogin = async (e: any) => {
 
@@ -62,7 +62,7 @@ const Signup = () => {
 
                         <form className="space-y-4 md:space-y-6" action="#" onSubmit={onSubmitLogin}>
                             <div>
-                                <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
+                                <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
                                 <input value={username} onChange={(e) => setUsername(e.target.value)} type="username" name="username" id="username" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-[#378CE7] focus:border-[#378CE7] block w-full p-2.5 " placeholder="username..." required={true} />
                             </div>
                             <div>

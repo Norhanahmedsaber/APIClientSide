@@ -3,10 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import config from "../config.json"
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
-interface User {
-    name: string
-    email: string
-}
+
 interface Org {
     name: string
     description: string
@@ -14,7 +11,6 @@ interface Org {
     organization_members: string
 }
 export default function Home() {
-    const [users, setUsers] = useState<User[]>([])
     const [orgs, setOrgs] = useState<Org[]>([])
     const { token } = useContext(AppContext)
     const nav = useNavigate()
