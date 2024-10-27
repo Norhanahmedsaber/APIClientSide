@@ -10,7 +10,7 @@ const Signup = () => {
 
     const [error, setError] = useState('')
     const nav = useNavigate()
-    const [loginDisabled,_] = useState(false);
+    const [loginDisabled, _] = useState(false);
 
     const onSubmitLogin = async (e: any) => {
 
